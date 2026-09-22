@@ -15,3 +15,52 @@
 .reward-pop{font-size:64px;animation:rewardBounce .8s ease both}.success-card .confetti{letter-spacing:8px}
 @keyframes rewardBounce{0%{transform:scale(.4);opacity:0}70%{transform:scale(1.15)}100%{transform:scale(1);opacity:1}}
 @media(max-width:700px){#leafletMap{height:390px}.map-legend{bottom:82px}}
+
+/* ===== TurismoAcobamba V5: interfaz de ruta corregida ===== */
+.map-legend{
+  top:72px;
+  bottom:auto;
+  left:14px;
+  right:auto;
+  max-width:calc(100% - 28px);
+  white-space:nowrap;
+}
+.route-status{
+  position:relative;
+  z-index:2;
+}
+.route-status>div{
+  min-width:0;
+}
+.route-status small{
+  font-size:12px;
+}
+.route-status strong{
+  font-size:15px;
+  white-space:nowrap;
+}
+@media(max-width:560px){
+  .map-legend{
+    top:70px;
+    left:12px;
+    padding:8px 10px;
+    gap:10px;
+    font-size:10px;
+  }
+  .route-status{
+    grid-template-columns:1fr 1fr;
+  }
+  .route-status>div{
+    padding:14px 12px;
+    gap:9px;
+  }
+  .route-status>div>span{
+    font-size:20px;
+  }
+  .route-status small{
+    font-size:10px;
+  }
+  .route-status strong{
+    font-size:13px;
+  }
+}

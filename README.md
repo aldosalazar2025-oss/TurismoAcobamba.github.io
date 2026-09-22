@@ -1,27 +1,16 @@
-# TurismoAcobamba V4
+# TurismoAcobamba V5
 
-## Novedades
-- Mapa interactivo con Leaflet + OpenStreetMap.
-- Ubicación GPS en tiempo real.
-- Ruta automática mediante OSRM cuando el servicio está disponible.
-- Distancia y tiempo estimado.
-- Marcadores de usuario y destino.
-- Zona de llegada de 100 metros.
-- Barra de progreso del reto.
-- Recompensa animada al completar.
-- XP acumulativo con Firestore usando `increment()`.
-- Un destino no vuelve a entregar XP si ya fue completado.
-- Mantiene Google Authentication y Firestore de V3.
+## Mejoras de esta versión
+- Corrección visual de la leyenda **Tú / Destino** para que no tape el bloque de **Distancia**.
+- En celulares, la información de ruta queda organizada en una cuadrícula de 2 x 2:
+  - Distancia
+  - Tiempo estimado
+  - GPS
+  - Destino
+- La leyenda del mapa ahora se mantiene dentro del mapa, en una posición superior y separada de las métricas.
+- Mejor espaciado y tamaño de textos para pantallas pequeñas.
+- Se conserva el mapa Leaflet, GPS, ruta, Firestore, logros e XP de V4.1.
+- Se actualiza el nombre visible de la aplicación a **TurismoAcobamba**.
 
-## Publicación
-Puedes subir los archivos a GitHub Pages como en V3.
-
-## Importante
-Las coordenadas de los destinos siguen siendo DEMOSTRATIVAS. Antes de presentar/publicar el proyecto como plataforma turística real, reemplázalas por coordenadas verificadas de los atractivos de Acobamba.
-
-El cálculo de ruta usa el servicio público de OSRM para demostración y OpenStreetMap para el mapa. Si el servicio de ruta no responde, la aplicación muestra la distancia en línea recta como respaldo.
-
-No se usa Firebase Storage.
-
-## V4.1 - Corrección del mapa
-Se corrigió la carga de Leaflet eliminando hashes SRI incorrectos que podían bloquear el CSS/JavaScript del mapa en GitHub Pages.
+## Prueba recomendada
+Abre un destino desde un celular, activa la ubicación y comprueba que la leyenda `Tú / Destino` quede sobre el mapa y que `Distancia` quede completamente visible debajo del mapa.
