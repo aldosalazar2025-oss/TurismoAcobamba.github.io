@@ -1,33 +1,24 @@
-# TurismoAcobamba V2 — Firebase conectado
+# TurismoAcobamba V4
 
-## Ya conectado
-- Firebase Authentication
-- Google Login
-- Firestore
-- Perfil del usuario
-- Catálogo
-- Destinos
-- Logros por usuario
-- XP
-- Insignias
-- Validación GPS
-- Modo de simulación de llegada
+## Novedades
+- Mapa interactivo con Leaflet + OpenStreetMap.
+- Ubicación GPS en tiempo real.
+- Ruta automática mediante OSRM cuando el servicio está disponible.
+- Distancia y tiempo estimado.
+- Marcadores de usuario y destino.
+- Zona de llegada de 100 metros.
+- Barra de progreso del reto.
+- Recompensa animada al completar.
+- XP acumulativo con Firestore usando `increment()`.
+- Un destino no vuelve a entregar XP si ya fue completado.
+- Mantiene Google Authentication y Firestore de V3.
 
-## Configuración de Firestore
-Copia el contenido de `firestore.rules` en:
-Firebase Console > Firestore Database > Rules
-y pulsa Publish.
-
-## Authentication
-Firebase Console > Authentication > Sign-in method > Google > Enable.
-
-Si pruebas en `localhost`, agrega el dominio en Authentication > Settings > Authorized domains si Firebase te lo solicita.
+## Publicación
+Puedes subir los archivos a GitHub Pages como en V3.
 
 ## Importante
-No se utiliza Firebase Storage en esta versión.
+Las coordenadas de los destinos siguen siendo DEMOSTRATIVAS. Antes de presentar/publicar el proyecto como plataforma turística real, reemplázalas por coordenadas verificadas de los atractivos de Acobamba.
 
-Las coordenadas de los destinos son de demostración. Antes de publicar el proyecto debes reemplazarlas por las coordenadas reales de cada atractivo turístico.
+El cálculo de ruta usa el servicio público de OSRM para demostración y OpenStreetMap para el mapa. Si el servicio de ruta no responde, la aplicación muestra la distancia en línea recta como respaldo.
 
-## Ejecución
-No abras los HTML con doble clic si el navegador bloquea módulos.
-Usa VS Code + Live Server o cualquier servidor HTTP local.
+No se usa Firebase Storage.

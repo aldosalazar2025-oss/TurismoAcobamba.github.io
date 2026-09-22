@@ -3,47 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ruta - Turismo Recompensas</title>
+  <title>Ruta - TurismoAcobamba</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIINfQ3lT9iF8R4J2KpXxZ0f0Qh3q1r5d0=" crossorigin="">
 </head>
 <body>
   <header class="simple-topbar">
-    <a href="app.html" class="back">←</a><strong id="mapTitle">Ruta de exploración</strong><span></span>
+    <a href="app.html" class="back">←</a>
+    <strong id="mapTitle">Ruta de exploración</strong>
+    <span></span>
   </header>
+
   <main class="container map-page">
-    <section class="map-card">
-      <div id="mapVisual" class="map-visual">
-        <div class="map-grid"></div>
-        <div class="map-road road-a"></div><div class="map-road road-b"></div>
-        <div id="userMarker" class="map-marker user-marker">📍</div>
-        <div id="destinationMarker" class="map-marker destination-marker">🏆</div>
-        <div class="route-line"></div>
-        <div class="map-label user-label">Tú</div>
-        <div class="map-label destination-label">Destino</div>
+    <section class="map-card v4-map-card">
+      <div id="leafletMap"></div>
+      <div class="map-floating">
+        <span id="mapLiveBadge" class="live-badge">● GPS apagado</span>
+        <button id="centerBtn" class="map-mini-btn" title="Centrar en mi ubicación">⌖</button>
+      </div>
+      <div class="map-legend">
+        <span><i class="legend-dot user-dot"></i> Tú</span>
+        <span><i class="legend-dot destination-dot"></i> Destino</span>
       </div>
       <div class="route-status">
-        <div><span>📏</span><div><small>Distancia</small><strong id="distance">Calculando...</strong></div></div>
-        <div><span>📍</span><div><small>GPS</small><strong id="gpsStatus">Esperando permiso</strong></div></div>
+        <div><span>📏</span><div><small>Distancia</small><strong id="distance">--</strong></div></div>
+        <div><span>⏱️</span><div><small>Tiempo estimado</small><strong id="eta">--</strong></div></div>
+        <div><span>📍</span><div><small>GPS</small><strong id="gpsStatus">Esperando</strong></div></div>
+        <div><span>🧭</span><div><small>Destino</small><strong id="destinationStatus">Pendiente</strong></div></div>
       </div>
     </section>
 
     <section class="arrival-card">
       <p class="eyebrow">RETO ACTIVO</p>
-      <h2>🏃 Sigue la ruta hasta el destino</h2>
-      <p id="routeMessage">Activa tu ubicación para comenzar la experiencia.</p>
+      <h2 id="challengeTitle">Llega al destino para desbloquear tu recompensa</h2>
+      <p id="routeMessage">Pulsa el botón para activar tu ubicación. La ruta se actualizará mientras avanzas.</p>
+      <div class="progress-wrap">
+        <div class="progress-label"><span>Progreso</span><strong id="routeProgress">0%</strong></div>
+        <div class="progress"><span id="routeProgressBar"></span></div>
+      </div>
       <button id="locationBtn" class="btn primary full">📍 Activar mi ubicación</button>
       <button id="simulateBtn" class="btn secondary full">🎉 Simular llegada (demo)</button>
     </section>
 
     <section id="successCard" class="success-card hidden">
-      <div class="confetti">🎉 🏆 🎖️</div>
-      <h2>¡Destino descubierto!</h2>
-      <p>Has completado este reto y desbloqueaste una nueva recompensa.</p>
-      <div class="reward">⭐ +100 XP</div>
-      <a class="btn primary full" href="logros.html">Ver mi insignia</a>
+      <div class="reward-pop">🎉</div>
+      <div class="confetti">🏆 🎖️ ⭐</div>
+      <p class="eyebrow">¡NUEVO LOGRO!</p>
+      <h2 id="successTitle">¡Destino descubierto!</h2>
+      <p id="successText">Has completado este reto y desbloqueaste una nueva recompensa.</p>
+      <div class="reward" id="rewardText">⭐ +100 XP</div>
+      <a class="btn primary full" href="logros.html">Ver mis insignias</a>
     </section>
   </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2V2Z0F5m9w8J4d3x4r7f5Y="
+          crossorigin=""></script>
   <script type="module" src="js/mapa.js"></script>
 </body>
 </html>
