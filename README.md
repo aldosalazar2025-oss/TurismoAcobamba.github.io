@@ -1,6 +1,10 @@
-# TurismoAcobamba V6
+# TurismoAcobamba V6.1
 
 V6 agrega un catálogo turístico interactivo y pensado para celular.
+
+## Corrección V6.1
+- Corregido el tamaño gigante de la etiqueta de dificultad en las tarjetas (Fácil/Media).
+- La etiqueta ya no es afectada por la animación del emoji.
 
 ## Novedades
 - Buscador de destinos.
