@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil - Turismo Recompensas</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header class="simple-topbar"><a href="app.html" class="back">←</a><strong>Mi perfil</strong><span></span></header>
+  <main class="container page-space">
+    <section class="profile-card">
+      <img id="profilePhoto" src="https://placehold.co/160x160?text=👤" alt="Foto de perfil">
+      <p class="eyebrow">EXPLORADOR</p>
+      <h1 id="profileName">Explorador</h1>
+      <p id="profileEmail" class="muted">Conecta Firebase para mostrar tu cuenta.</p>
+      <div class="level-line"><span>Nivel <strong id="levelValue">1</strong></span><span><strong id="profileXp">0</strong> / 500 XP</span></div>
+      <div class="progress"><span id="levelProgress"></span></div>
+    </section>
+    <section class="stats-grid profile-stats">
+      <div class="stat-card"><strong id="pDestinos">0</strong><span>🗺️ Destinos</span></div>
+      <div class="stat-card"><strong id="pBadges">0</strong><span>🎖️ Insignias</span></div>
+      <div class="stat-card"><strong id="pXp">0</strong><span>⭐ XP total</span></div>
+    </section>
+    <section class="section-card">
+      <p class="eyebrow">PRÓXIMO OBJETIVO</p>
+      <h2>🥾 Explorador Local</h2>
+      <p>Descubre 3 destinos para avanzar en tu aventura.</p>
+      <a class="btn primary" href="app.html">Explorar destinos</a>
+    </section>
+  </main>
+  <nav class="bottom-nav">
+    <a href="app.html"><span>🏠</span>Inicio</a><a href="app.html#destinosGrid"><span>🗺️</span>Explorar</a><a href="logros.html"><span>🏆</span>Logros</a><a class="active" href="perfil.html"><span>👤</span>Perfil</a>
+  </nav>
+  <script type="module" src="js/usuario.js"></script>
+</body>
+</html>

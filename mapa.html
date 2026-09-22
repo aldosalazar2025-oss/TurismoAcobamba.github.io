@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruta - Turismo Recompensas</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header class="simple-topbar">
+    <a href="app.html" class="back">←</a><strong id="mapTitle">Ruta de exploración</strong><span></span>
+  </header>
+  <main class="container map-page">
+    <section class="map-card">
+      <div id="mapVisual" class="map-visual">
+        <div class="map-grid"></div>
+        <div class="map-road road-a"></div><div class="map-road road-b"></div>
+        <div id="userMarker" class="map-marker user-marker">📍</div>
+        <div id="destinationMarker" class="map-marker destination-marker">🏆</div>
+        <div class="route-line"></div>
+        <div class="map-label user-label">Tú</div>
+        <div class="map-label destination-label">Destino</div>
+      </div>
+      <div class="route-status">
+        <div><span>📏</span><div><small>Distancia</small><strong id="distance">Calculando...</strong></div></div>
+        <div><span>📍</span><div><small>GPS</small><strong id="gpsStatus">Esperando permiso</strong></div></div>
+      </div>
+    </section>
+
+    <section class="arrival-card">
+      <p class="eyebrow">RETO ACTIVO</p>
+      <h2>🏃 Sigue la ruta hasta el destino</h2>
+      <p id="routeMessage">Activa tu ubicación para comenzar la experiencia.</p>
+      <button id="locationBtn" class="btn primary full">📍 Activar mi ubicación</button>
+      <button id="simulateBtn" class="btn secondary full">🎉 Simular llegada (demo)</button>
+    </section>
+
+    <section id="successCard" class="success-card hidden">
+      <div class="confetti">🎉 🏆 🎖️</div>
+      <h2>¡Destino descubierto!</h2>
+      <p>Has completado este reto y desbloqueaste una nueva recompensa.</p>
+      <div class="reward">⭐ +100 XP</div>
+      <a class="btn primary full" href="logros.html">Ver mi insignia</a>
+    </section>
+  </main>
+  <script type="module" src="js/mapa.js"></script>
+</body>
+</html>
