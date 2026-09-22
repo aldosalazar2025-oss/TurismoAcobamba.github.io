@@ -12,10 +12,10 @@
   <main class="container page-space">
     <section class="profile-card">
       <img id="profilePhoto" src="https://placehold.co/160x160?text=👤" alt="Foto de perfil">
-      <p class="eyebrow">EXPLORADOR</p>
+      <p class="eyebrow" id="profileRank">🌱 Explorador Novato</p>
       <h1 id="profileName">Explorador</h1>
       <p id="profileEmail" class="muted">Conecta Firebase para mostrar tu cuenta.</p>
-      <div class="level-line"><span>Nivel <strong id="levelValue">1</strong></span><span><strong id="profileXp">0</strong> / 500 XP</span></div>
+      <div class="level-line"><span>Nivel <strong id="levelValue">1</strong></span><span id="levelXpText"><strong id="profileXp">0</strong> / 500 XP</span></div>
       <div class="progress"><span id="levelProgress"></span></div>
     </section>
     <section class="stats-grid profile-stats">
@@ -25,8 +25,8 @@
     </section>
     <section class="section-card">
       <p class="eyebrow">PRÓXIMO OBJETIVO</p>
-      <h2>🥾 Explorador Local</h2>
-      <p>Descubre 3 destinos para avanzar en tu aventura.</p>
+      <h2 id="nextGoalTitle">🧭 Próximo rango</h2>
+      <p id="nextGoal">Descubre tu primer destino para comenzar la aventura.</p>
       <a class="btn primary" href="app.html">Explorar destinos</a>
     </section>
   </main>
