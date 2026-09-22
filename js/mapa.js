@@ -162,10 +162,15 @@ function startGPS(){
   if(watchId!==null) return;
   $("gpsStatus").textContent="Buscando...";
   $("routeMessage").textContent="Permite la ubicación y empieza a desplazarte hacia el destino.";
-  watchId=navigator.geolocation.watchPosition(updatePosition,()=>{
-    $("gpsStatus").textContent="Permiso pendiente";
-    $("routeMessage").textContent="Activa el permiso de ubicación del navegador para continuar.";
-  },{enableHighAccuracy:true,maximumAge:3000,timeout:15000});
+  watchId=navigator.geolocation.watchPosition(updatePosition,(err)=>{
+    $("gpsStatus").textContent="No disponible";
+    const msg = err.code === 1
+      ? "Permiso de ubicación denegado. En Chrome: candado de la barra → Ubicación → Permitir, y vuelve a cargar."
+      : err.code === 2
+      ? "No se pudo obtener tu ubicación. Comprueba el GPS y la señal."
+      : "La ubicación tardó demasiado. Comprueba el GPS e inténtalo otra vez.";
+    $("routeMessage").textContent=msg;
+  },{enableHighAccuracy:true,maximumAge:3000,timeout:20000});
 }
 
 $("locationBtn").addEventListener("click",startGPS);

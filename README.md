@@ -22,3 +22,6 @@ Las coordenadas de los destinos siguen siendo DEMOSTRATIVAS. Antes de presentar/
 El cálculo de ruta usa el servicio público de OSRM para demostración y OpenStreetMap para el mapa. Si el servicio de ruta no responde, la aplicación muestra la distancia en línea recta como respaldo.
 
 No se usa Firebase Storage.
+
+## V4.1 - Corrección del mapa
+Se corrigió la carga de Leaflet eliminando hashes SRI incorrectos que podían bloquear el CSS/JavaScript del mapa en GitHub Pages.
