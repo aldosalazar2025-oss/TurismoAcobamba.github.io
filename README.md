@@ -21,3 +21,10 @@ V6 agrega un catálogo turístico interactivo y pensado para celular.
 Los datos y coordenadas de los destinos son todavía demostrativos. Para una versión real, sustituye las coordenadas y textos por información verificada de los atractivos turísticos de Acobamba.
 
 Los favoritos se guardan en localStorage para no requerir cambios en las reglas de Firestore.
+
+
+## V6.2
+- Corregido el botón “Guardar favorito” del detalle: ya no hereda el tamaño gigante del emoji.
+- Sistema de niveles actualizado: cada 100 XP aumenta 1 nivel.
+- Ejemplo: 0 XP = Nivel 1, 100 XP = Nivel 2, 200 XP = Nivel 3, 400 XP = Nivel 5.
+- La barra de progreso ahora representa el avance hacia el siguiente nivel (100 XP).

@@ -22,8 +22,10 @@ onAuthStateChanged(auth,async u=>{
   const xp=logrosSnap.docs.reduce((total,x)=>total+Number(x.data().xp||100),0);
   if((data.xpAcumulado||0)!==xp) await setDoc(userRef,{xpAcumulado:xp}, {merge:true});
   const rank=rankFor(count);
-  const level=Math.floor(xp/500)+1;
-  const current=xp%500;
+  // Cada 100 XP aumenta un nivel. El Nivel 1 comienza en 0 XP.
+  const level=Math.floor(xp/100)+1;
+  const current=xp%100;
+  const currentDisplay=(xp>0 && current===0)?100:current;
   const name=u.displayName||data.nombre||"Explorador";
   document.querySelectorAll("#userName,#profileName").forEach(e=>e.textContent=name);
   const hello=document.getElementById("helloName");if(hello)hello.textContent=name.split(" ")[0];
@@ -33,7 +35,7 @@ onAuthStateChanged(auth,async u=>{
   const rankEls=document.querySelectorAll("#userRank,#profileRank");rankEls.forEach(e=>e.textContent=`${rank.icon} ${rank.name}`);
   const next=document.getElementById("nextGoal");if(next)next.textContent=rank.next;
   [["xpValue",xp],["destinoCount",count],["badgeCount",count],["pDestinos",count],["pBadges",count],["pXp",xp],["profileXp",xp],["levelValue",level]].forEach(([id,v])=>{const e=document.getElementById(id);if(e)e.textContent=v});
-  const progress=document.getElementById("levelProgress");if(progress)progress.style.width=`${Math.min(100,current/500*100)}%`;
-  const levelText=document.getElementById("levelXpText");if(levelText)levelText.textContent=`${current} / 500 XP`;
+  const progress=document.getElementById("levelProgress");if(progress)progress.style.width=`${Math.min(100,currentDisplay)}%`;
+  const levelText=document.getElementById("levelXpText");if(levelText)levelText.textContent=`${currentDisplay} / 100 XP`;
  }catch(e){console.error("Error cargando perfil:",e);}
 });
