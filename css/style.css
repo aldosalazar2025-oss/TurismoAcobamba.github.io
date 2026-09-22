@@ -64,3 +64,19 @@
     font-size:13px;
   }
 }
+
+/* ===== TurismoAcobamba V6: catálogo turístico ===== */
+.catalog-tools{background:#fff;border:1px solid #deedf2;border-radius:22px;padding:16px;margin:24px 0 28px;box-shadow:0 8px 25px rgba(36,91,116,.05)}
+.search-box{display:flex;align-items:center;gap:10px;border:1px solid #d8e9ef;border-radius:14px;padding:0 14px;background:#f8fcfd}
+.search-box span{font-size:20px}.search-box input{border:0;outline:0;background:transparent;width:100%;padding:14px 0;font-size:15px;color:#12304a}
+.filter-row{display:flex;gap:8px;overflow-x:auto;padding:13px 0 7px;scrollbar-width:none}.filter-row::-webkit-scrollbar{display:none}
+.filter{border:1px solid #dcebf0;background:#fff;color:#5f7784;padding:9px 12px;border-radius:999px;white-space:nowrap;font-weight:800;font-size:12px;cursor:pointer}.filter.active{background:#0b9ba5;color:#fff;border-color:#0b9ba5}
+.catalog-options{display:flex;justify-content:space-between;align-items:center;color:#718894;font-size:12px;font-weight:800;padding-top:5px}
+.outline-btn{border:1px solid #cfe2e9;background:#fff;border-radius:10px;padding:8px 11px;color:#0b8194;font-weight:850;cursor:pointer}.outline-btn.active{background:#effaf7;border-color:#bfe7db}
+.v6-card{position:relative}.v6-card .destination-img{position:relative}.destination-img>span{transition:transform .25s}.v6-card:hover .destination-img>span{transform:scale(1.08)}
+.favorite-btn{position:absolute;right:12px;top:12px;width:39px;height:39px;border:0;border-radius:50%;background:rgba(255,255,255,.94);box-shadow:0 5px 15px rgba(0,0,0,.1);font-size:22px;color:#a7b7bd;cursor:pointer}.favorite-btn.liked{color:#e45f77}
+.difficulty{position:absolute;left:12px;bottom:12px;background:rgba(255,255,255,.92);padding:6px 9px;border-radius:999px;font-size:10px;font-weight:900;color:#55727f}
+.empty-state{text-align:center;background:#fff;border:1px dashed #cbdfe6;border-radius:20px;padding:35px;color:#6c8490}.empty-state>div{font-size:45px}.empty-state h3{margin:8px 0}
+.detail-cover{position:relative}.detail-cover>span{display:block}.detail-favorite{position:absolute;right:20px;bottom:20px;border:1px solid #d7e9ee;background:rgba(255,255,255,.94);border-radius:999px;padding:10px 13px;font-weight:850;color:#0b8194;cursor:pointer}.detail-favorite.liked{color:#d9516b}
+.location-line{font-weight:750;color:#496d7c!important}.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0}.info-grid>div{background:#f5fbfd;border:1px solid #e0edf2;border-radius:16px;padding:15px}.info-grid p{margin-bottom:0!important;font-size:13px}
+@media(max-width:600px){.catalog-options{font-size:11px}.info-grid{grid-template-columns:1fr}.detail-favorite{right:12px;bottom:12px}.destination-img{height:180px}}

@@ -1,16 +1,19 @@
-# TurismoAcobamba V5
+# TurismoAcobamba V6
 
-## Mejoras de esta versión
-- Corrección visual de la leyenda **Tú / Destino** para que no tape el bloque de **Distancia**.
-- En celulares, la información de ruta queda organizada en una cuadrícula de 2 x 2:
-  - Distancia
-  - Tiempo estimado
-  - GPS
-  - Destino
-- La leyenda del mapa ahora se mantiene dentro del mapa, en una posición superior y separada de las métricas.
-- Mejor espaciado y tamaño de textos para pantallas pequeñas.
-- Se conserva el mapa Leaflet, GPS, ruta, Firestore, logros e XP de V4.1.
-- Se actualiza el nombre visible de la aplicación a **TurismoAcobamba**.
+V6 agrega un catálogo turístico interactivo y pensado para celular.
 
-## Prueba recomendada
-Abre un destino desde un celular, activa la ubicación y comprueba que la leyenda `Tú / Destino` quede sobre el mapa y que `Distancia` quede completamente visible debajo del mapa.
+## Novedades
+- Buscador de destinos.
+- Filtros por Naturaleza, Cultura, Aventura y Gastronomía.
+- Contador de resultados.
+- Favoritos guardados localmente en el dispositivo.
+- Tarjetas con dificultad, categoría, XP y estado de completado.
+- Detalle de destino con información ampliada y recompensa.
+- Botón para guardar favorito desde el detalle.
+- Mantiene Google Authentication + Firestore.
+- Mantiene mapa, GPS, ruta, logros e XP de V5.
+
+## Importante
+Los datos y coordenadas de los destinos son todavía demostrativos. Para una versión real, sustituye las coordenadas y textos por información verificada de los atractivos turísticos de Acobamba.
+
+Los favoritos se guardan en localStorage para no requerir cambios en las reglas de Firestore.
