@@ -82,7 +82,8 @@
 @media(max-width:600px){.catalog-options{font-size:11px}.info-grid{grid-template-columns:1fr}.detail-favorite{right:12px;bottom:12px}.destination-img{height:180px}}
 
 /* ===== TurismoAcobamba V8: fotos reales ===== */
-.destination-img img,.detail-cover img{width:100%;height:100%;object-fit:cover;display:block}
+.destination-img img{width:100%;height:100%;object-fit:cover;display:block}
+.detail-cover img{width:100%;height:100%;object-fit:contain;display:block}
 .detail-cover{overflow:hidden}
 .photo-thumbs{display:flex;gap:8px;padding:12px 28px 0;overflow-x:auto;scrollbar-width:none}
 .photo-thumbs::-webkit-scrollbar{display:none}
