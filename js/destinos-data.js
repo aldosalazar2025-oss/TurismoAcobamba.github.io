@@ -1,0 +1,102 @@
+export const destinos = [
+  {
+    id:"iglesia-san-juan-bautista",
+    nombre:"Iglesia San Juan Bautista",
+    ubicacion:"Plaza José Olaya, Pueblo Viejo, Acobamba",
+    descripcion:"Templo histórico de Acobamba, reconocido por su arquitectura colonial y su fachada tallada en piedra.",
+    emoji:"⛪",
+    categoria:"Cultura",
+    xp:100,
+    lat:-12.84734807,
+    long:-74.56753495,
+    insignia:"Guardián de la Historia",
+    historia:"La Iglesia San Juan Bautista se encuentra en la plaza José Olaya del barrio Pueblo Viejo. El inventario turístico de MINCETUR señala una construcción de época virreinal, con dos torres de piedra, portada de madera sobre arco de piedra labrada y elementos ornamentales de tradición barroca y churrigueresca.",
+    dificultad:"Fácil"
+  },
+  {
+    id:"complejo-arqueologico-allpas",
+    nombre:"Complejo Arqueológico de Allpas",
+    ubicacion:"Comunidad Campesina de Allpas, Acobamba",
+    descripcion:"Complejo arqueológico con sectores como las ventanillas, el templo ceremonial Hatun Rumi y antiguas áreas de vivienda.",
+    emoji:"🏺",
+    categoria:"Arqueología",
+    xp:100,
+    lat:-12.877319130182771,
+    long:-74.58430534891846,
+    insignia:"Explorador Arqueológico",
+    historia:"MINCETUR describe Allpas como un complejo arqueológico de la comunidad de Allpas, con cuatro sectores destacados: las ventanillas, el templo ceremonial Hatun Rumi, viviendas de base circular e Ichu Wasi e Inkicucho. El lugar permite realizar observación, fotografía y caminata.",
+    dificultad:"Media"
+  },
+  {
+    id:"willka-puquio",
+    nombre:"Manantial Willka Puquio",
+    ubicacion:"Pueblo Viejo, Acobamba",
+    descripcion:"Manantial tradicional con canales, estructuras de piedra y una pequeña caída de agua.",
+    emoji:"💧",
+    categoria:"Cultura",
+    xp:100,
+    lat:-12.8489,
+    long:-74.5677,
+    insignia:"Guardián del Agua",
+    historia:"El inventario de MINCETUR registra Willka Puquio como un recurso de arquitectura y espacios urbanos. El nombre significa “Manantial del Nieto” y el sitio conserva un pequeño complejo hidráulico con canales, una fuente, una caída de aproximadamente 1,50 m y elementos tallados en piedra.",
+    dificultad:"Fácil"
+  },
+  {
+    id:"pinturas-rupestres-quillamachay",
+    nombre:"Pinturas Rupestres de Quillamachay",
+    ubicacion:"Comunidad Campesina Quilla Machay, Acobamba",
+    descripcion:"Sitio arqueológico con cuevas que conservan pinturas rupestres de gran interés cultural.",
+    emoji:"🪨",
+    categoria:"Arqueología",
+    xp:100,
+    lat:-12.8065,
+    long:-74.5764,
+    insignia:"Guardián del Arte Rupestre",
+    historia:"MINCETUR registra las Pinturas Rupestres de Quillamachay como un sitio arqueológico de pintura rupestre. Las cuevas conservan representaciones de gran tamaño que cubren paredes y bóvedas, constituyendo un importante legado cultural de la zona.",
+    dificultad:"Media"
+  },
+  {
+    id:"tumbas-pre-incas-allpas",
+    nombre:"Tumbas Pre-Incas de Allpas",
+    ubicacion:"Allpas, Acobamba",
+    descripcion:"Conjunto funerario preincaico asociado a las ventanillas y formaciones arqueológicas de Allpas.",
+    emoji:"🏺",
+    categoria:"Arqueología",
+    xp:100,
+    lat:-12.877319130182771,
+    long:-74.58430534891846,
+    insignia:"Custodio de los Ancestros",
+    historia:"Las fuentes locales y documentos de planificación de Acobamba describen en Allpas un importante conjunto de tumbas preincas en el cerro Mukucho. La cifra de tumbas varía según la fuente y el inventario, por lo que esta versión evita presentar un número como dato exacto.",
+    dificultad:"Media"
+  },
+  {
+    id:"mirador-qapari",
+    nombre:"Mirador Qapari",
+    ubicacion:"Comunidad Virgen de Lourdes, al norte de Acobamba",
+    descripcion:"Mirador asociado a un bosque rocoso que permite observar panorámicas del entorno de Acobamba.",
+    emoji:"⛰️",
+    categoria:"Paisaje",
+    xp:100,
+    lat:-12.80160938331178,
+    long:-74.57158176926595,
+    insignia:"Explorador de Alturas",
+    historia:"Material institucional de la provincia describe Qapari como un mirador ubicado al norte de la ciudad de Acobamba, en la comunidad Virgen de Lourdes, con formaciones rocosas y vistas panorámicas de la provincia.",
+    dificultad:"Media"
+  },
+  {
+    id:"alameda-identidad-acobambina",
+    nombre:"Alameda de la Identidad Acobambina",
+    ubicacion:"Acobamba, Huancavelica",
+    descripcion:"Espacio urbano vinculado a la identidad local y al desarrollo turístico de Acobamba.",
+    emoji:"🌳",
+    categoria:"Cultura",
+    xp:100,
+    lat:-12.842837114520806,
+    long:-74.5721516721012,
+    insignia:"Embajador de Acobamba",
+    historia:"La Alameda Eco Turística de la Identidad Acobambina aparece en documentación del Gobierno Regional de Huancavelica como un proyecto orientado al mejoramiento de un espacio de identidad y uso turístico de la ciudad.",
+    dificultad:"Fácil"
+  }
+];
+
+export const destinoPorId = id => destinos.find(d => d.id === id) || destinos[0];
