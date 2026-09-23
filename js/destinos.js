@@ -37,6 +37,12 @@ function safe(t){
   return String(t).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));
 }
 
+window.__imgFallback=function(el,emoji){
+  const span=document.createElement("span");
+  span.textContent=emoji;
+  el.replaceWith(span);
+};
+
 function renderCatalog(){
   const grid=document.getElementById("destinosGrid");
   if(!grid)return;
@@ -56,7 +62,7 @@ function renderCatalog(){
     const cover=d.fotos?.[0];
     return `<article class="destination-card v6-card">
       <div class="destination-img">
-        ${cover?`<img src="${cover}" alt="${safe(d.nombre)}" loading="lazy">`:`<span>${d.emoji}</span>`}
+        ${cover?`<img src="${cover}" alt="${safe(d.nombre)}" loading="lazy" onerror="window.__imgFallback(this,'${d.emoji}')">`:`<span>${d.emoji}</span>`}
         <button class="favorite-btn ${liked?"liked":""}" data-fav="${d.id}" aria-label="Favorito">${liked?"♥":"♡"}</button>
       </div>
       <div class="destination-body">
@@ -83,10 +89,10 @@ function renderDetail(){
 
   box.innerHTML=`<article class="detail-card v6-detail">
     <div class="detail-cover">
-      ${fotos.length?`<img id="coverImg" src="${fotos[0]}" alt="${safe(d.nombre)}">`:`<span>${d.emoji}</span>`}
+      ${fotos.length?`<img id="coverImg" src="${fotos[0]}" alt="${safe(d.nombre)}" onerror="window.__imgFallback(this,'${d.emoji}')">`:`<span>${d.emoji}</span>`}
       <button id="detailFav" class="detail-favorite ${liked?"liked":""}">${liked?"♥ Guardado":"♡ Guardar favorito"}</button>
     </div>
-    ${fotos.length>1?`<div class="photo-thumbs">${fotos.map((f,i)=>`<button class="thumb-btn ${i===0?"active":""}" data-src="${f}"><img src="${f}" alt="Foto ${i+1} de ${safe(d.nombre)}" loading="lazy"></button>`).join("")}</div>`:""}
+    ${fotos.length>1?`<div class="photo-thumbs">${fotos.map((f,i)=>`<button class="thumb-btn ${i===0?"active":""}" data-src="${f}"><img src="${f}" alt="Foto ${i+1} de ${safe(d.nombre)}" loading="lazy" onerror="this.closest('.thumb-btn').remove()"></button>`).join("")}</div>`:""}
     <div class="detail-content">
       <div class="meta"><span class="tag">${safe(d.categoria)}</span><span class="tag">⭐ ${d.xp} XP</span><span class="tag">🥾 ${safe(d.dificultad)}</span></div>
       <h1>${safe(d.nombre)}</h1>
