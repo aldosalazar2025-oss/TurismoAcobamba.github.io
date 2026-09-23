@@ -13,7 +13,7 @@ export const destinos = [
     historia:"La Iglesia San Juan Bautista se encuentra en la plaza José Olaya del barrio Pueblo Viejo. El inventario turístico de MINCETUR señala una construcción de época virreinal, con dos torres de piedra, portada de madera sobre arco de piedra labrada y elementos ornamentales de tradición barroca y churrigueresca.",
     dificultad:"Fácil",
     fotos:["img/iglesia-san-juan-bautista/1.webp","img/iglesia-san-juan-bautista/2.webp","img/iglesia-san-juan-bautista/3.webp","img/iglesia-san-juan-bautista/4.webp"],
-    fotoPos:"center 15%"
+    fotoPos:"center"
   },
   {
     id:"willka-puquio",
@@ -98,8 +98,8 @@ export const destinos = [
     emoji:"🏞️",
     categoria:"Naturaleza",
     xp:100,
-    lat:-12.856461084636432,
-    long:-74.53715424086985,
+    lat:-12.85307926867017,
+    long:-74.5387132245859,
     insignia:"Guardián de la Laguna",
     historia:"La Laguna de Choclococha se ubica en el Centro Poblado de Choclococha, distrito de Pomacocha, provincia de Acobamba. Entre los meses de enero a mayo muestra su máximo esplendor, con sus aguas rodeadas de cerros verdes y bofedales altoandinos.",
     dificultad:"Media",
