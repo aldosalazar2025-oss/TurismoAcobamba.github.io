@@ -1,3 +1,11 @@
+# TurismoAcobamba V9
+
+## Cambios en esta versión
+- Se agregó el destino **Laguna de Choclococha** (categoría Naturaleza), en el Centro Poblado de Choclococha, distrito de Pomacocha, con 3 fotos propias optimizadas a WebP.
+- El filtro "🌿 Naturaleza" del catálogo ya existía en la interfaz y ahora tiene su primer destino real.
+
+## Cambios de la V8
+
 # TurismoAcobamba V8
 
 ## Cambios en esta versión
@@ -26,3 +34,4 @@
 4. Tumbas Pre-Incas de Allpas
 5. Mirador Qapari
 6. Alameda de la Identidad Acobambina
+7. Laguna de Choclococha

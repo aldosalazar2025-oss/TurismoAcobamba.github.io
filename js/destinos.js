@@ -62,7 +62,7 @@ function renderCatalog(){
     const cover=d.fotos?.[0];
     return `<article class="destination-card v6-card">
       <div class="destination-img">
-        ${cover?`<img src="${cover}" alt="${safe(d.nombre)}" loading="lazy" onerror="window.__imgFallback(this,'${d.emoji}')">`:`<span>${d.emoji}</span>`}
+        ${cover?`<img src="${cover}" alt="${safe(d.nombre)}" loading="lazy" style="object-position:${d.fotoPos||"center"}" onerror="window.__imgFallback(this,'${d.emoji}')">`:`<span>${d.emoji}</span>`}
         <button class="favorite-btn ${liked?"liked":""}" data-fav="${d.id}" aria-label="Favorito">${liked?"♥":"♡"}</button>
       </div>
       <div class="destination-body">
