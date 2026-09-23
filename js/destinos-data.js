@@ -1,6 +1,7 @@
 export const destinos = [
   {
     id:"iglesia-san-juan-bautista",
+    insigniaImg:"img/badges/iglesia-san-juan-bautista.webp",
     nombre:"Iglesia San Juan Bautista",
     ubicacion:"Plaza José Olaya, Pueblo Viejo, Acobamba",
     descripcion:"Templo histórico de Acobamba, reconocido por su arquitectura colonial y su fachada tallada en piedra.",
@@ -17,6 +18,7 @@ export const destinos = [
   },
   {
     id:"willka-puquio",
+    insigniaImg:"img/badges/willka-puquio.webp",
     nombre:"Manantial Willka Puquio",
     ubicacion:"Pueblo Viejo, Acobamba",
     descripcion:"Manantial tradicional con canales, estructuras de piedra y una pequeña caída de agua.",
@@ -32,6 +34,7 @@ export const destinos = [
   },
   {
     id:"pinturas-rupestres-quillamachay",
+    insigniaImg:"img/badges/pinturas-rupestres-quillamachay.webp",
     nombre:"Pinturas Rupestres de Quillamachay",
     ubicacion:"Comunidad Campesina Quilla Machay, Acobamba",
     descripcion:"Sitio arqueológico con cuevas que conservan pinturas rupestres de gran interés cultural.",
@@ -47,6 +50,7 @@ export const destinos = [
   },
   {
     id:"tumbas-pre-incas-allpas",
+    insigniaImg:"img/badges/tumbas-pre-incas-allpas.webp",
     nombre:"Tumbas Pre-Incas de Allpas",
     ubicacion:"Allpas, Acobamba",
     descripcion:"Conjunto funerario preincaico asociado a las ventanillas y formaciones arqueológicas de Allpas.",
@@ -63,6 +67,7 @@ export const destinos = [
   },
   {
     id:"mirador-qapari",
+    insigniaImg:"img/badges/mirador-qapari.webp",
     nombre:"Mirador Qapari",
     ubicacion:"Comunidad Virgen de Lourdes, al norte de Acobamba",
     descripcion:"Mirador asociado a un bosque rocoso que permite observar panorámicas del entorno de Acobamba.",
@@ -78,6 +83,7 @@ export const destinos = [
   },
   {
     id:"alameda-identidad-acobambina",
+    insigniaImg:"img/badges/alameda-identidad-acobambina.webp",
     nombre:"Alameda de la Identidad Acobambina",
     ubicacion:"Acobamba, Huancavelica",
     descripcion:"Espacio urbano vinculado a la identidad local y al desarrollo turístico de Acobamba.",
@@ -93,6 +99,7 @@ export const destinos = [
   },
   {
     id:"laguna-choclococha",
+    insigniaImg:"img/badges/laguna-choclococha.webp",
     nombre:"Laguna de Choclococha",
     ubicacion:"Centro Poblado de Choclococha, distrito de Pomacocha, Acobamba",
     descripcion:"Laguna altoandina rodeada de cerros y bofedales, un lugar digno de ser visitado.",

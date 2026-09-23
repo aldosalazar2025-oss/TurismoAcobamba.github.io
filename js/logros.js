@@ -28,8 +28,11 @@ async function render(u){
 
   grid.innerHTML=destinos.map(d=>{
     const ok=completed.includes(d.id);
+    const badgeImg=d.insigniaImg
+      ? `<img src="${d.insigniaImg}" alt="${ok?d.insignia:"Insignia bloqueada"}" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'${d.emoji}'}))">`
+      : `<span>${d.emoji}</span>`;
     return `<article class="badge-card ${ok?"unlocked":"locked"}">
-      <div class="badge-icon">${ok?d.emoji:"🔒"}</div>
+      <div class="badge-icon">${badgeImg}${ok?"":`<span class="lock-overlay">🔒</span>`}</div>
       <h3>${ok?d.insignia:"Insignia bloqueada"}</h3>
       <p>${ok?`Completaste ${d.nombre}.`:"Llega físicamente al destino para desbloquearla."}</p>
       ${ok?`<span class="tag">✓ Obtenida</span><button class="btn share" data-share="${d.id}" type="button">📤 Compartir</button>`:""}
