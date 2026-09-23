@@ -47,6 +47,12 @@ function initMap(){
     className:"arrival-zone",
     fillOpacity:.12
   }).addTo(map);
+
+  const fixSize=()=>map.invalidateSize();
+  window.addEventListener("resize",fixSize);
+  window.addEventListener("orientationchange",fixSize);
+  if(window.visualViewport)window.visualViewport.addEventListener("resize",fixSize);
+  setTimeout(fixSize,300);
 }
 
 async function drawRoute(lat,lon){
