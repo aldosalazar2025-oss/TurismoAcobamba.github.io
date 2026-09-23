@@ -1,4 +1,12 @@
-# TurismoAcobamba V7
+# TurismoAcobamba V8
+
+## Cambios en esta versión
+- Se eliminó el destino **Complejo Arqueológico de Allpas** del catálogo (ya no aparece en `js/destinos-data.js`, ni en el catálogo, mapa o insignias). Si el proyecto ya tenía usuarios con logros guardados para ese destino en Firestore (colección `usuarios/{uid}/logros`) o un documento en `destinos/complejo-arqueologico-allpas`, esos registros quedan huérfanos y conviene borrarlos manualmente desde la consola de Firebase; no rompen la app pero ya no se muestran en ningún lado.
+- Se agregaron fotos reales para los 6 destinos restantes (`img/<id>/1.webp`, `2.webp`, ...), optimizadas a máx. 1000px de ancho y calidad ~74 en WebP (de ~8.8 MB originales a ~1.9 MB en total, pensado para conexiones móviles).
+- El catálogo (`app.html`) ahora muestra la foto de portada de cada destino en vez del emoji.
+- El detalle (`destino.html`) muestra la foto principal y una galería de miniaturas debajo de la portada; al tocar una miniatura cambia la foto grande. El emoji queda como respaldo si algún destino no tiene fotos, y se sigue usando como ícono en insignias/mapa.
+
+## Cambios de la V7
 
 ## Cambios principales
 - Se reemplazaron los destinos demostrativos por 7 lugares turísticos reales de Acobamba.
@@ -13,9 +21,8 @@
 
 ## Destinos
 1. Iglesia San Juan Bautista
-2. Complejo Arqueológico de Allpas
-3. Manantial Willka Puquio
-4. Pinturas Rupestres de Quillamachay
-5. Tumbas Pre-Incas de Allpas
-6. Mirador Qapari
-7. Alameda de la Identidad Acobambina
+2. Manantial Willka Puquio
+3. Pinturas Rupestres de Quillamachay
+4. Tumbas Pre-Incas de Allpas
+5. Mirador Qapari
+6. Alameda de la Identidad Acobambina

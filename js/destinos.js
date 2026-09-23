@@ -53,9 +53,10 @@ function renderCatalog(){
 
   grid.innerHTML=list.map(d=>{
     const done=completed.includes(d.id), liked=fav.includes(d.id);
+    const cover=d.fotos?.[0];
     return `<article class="destination-card v6-card">
       <div class="destination-img">
-        <span>${d.emoji}</span>
+        ${cover?`<img src="${cover}" alt="${safe(d.nombre)}" loading="lazy">`:`<span>${d.emoji}</span>`}
         <button class="favorite-btn ${liked?"liked":""}" data-fav="${d.id}" aria-label="Favorito">${liked?"♥":"♡"}</button>
       </div>
       <div class="destination-body">
@@ -78,12 +79,14 @@ function renderDetail(){
   const id=new URLSearchParams(location.search).get("id")||destinos[0].id;
   const d=destinos.find(x=>x.id===id)||destinos[0];
   const liked=favorites().includes(d.id), done=completed.includes(d.id);
+  const fotos=d.fotos||[];
 
   box.innerHTML=`<article class="detail-card v6-detail">
     <div class="detail-cover">
-      <span>${d.emoji}</span>
+      ${fotos.length?`<img id="coverImg" src="${fotos[0]}" alt="${safe(d.nombre)}">`:`<span>${d.emoji}</span>`}
       <button id="detailFav" class="detail-favorite ${liked?"liked":""}">${liked?"♥ Guardado":"♡ Guardar favorito"}</button>
     </div>
+    ${fotos.length>1?`<div class="photo-thumbs">${fotos.map((f,i)=>`<button class="thumb-btn ${i===0?"active":""}" data-src="${f}"><img src="${f}" alt="Foto ${i+1} de ${safe(d.nombre)}" loading="lazy"></button>`).join("")}</div>`:""}
     <div class="detail-content">
       <div class="meta"><span class="tag">${safe(d.categoria)}</span><span class="tag">⭐ ${d.xp} XP</span><span class="tag">🥾 ${safe(d.dificultad)}</span></div>
       <h1>${safe(d.nombre)}</h1>
@@ -102,6 +105,13 @@ function renderDetail(){
     toggleFavorite(d.id);
     renderDetail();
   });
+
+  box.querySelectorAll(".thumb-btn").forEach(btn=>btn.addEventListener("click",()=>{
+    const cover=document.getElementById("coverImg");
+    if(cover)cover.src=btn.dataset.src;
+    box.querySelectorAll(".thumb-btn").forEach(b=>b.classList.remove("active"));
+    btn.classList.add("active");
+  }));
 }
 
 function bindFilters(){

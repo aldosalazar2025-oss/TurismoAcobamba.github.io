@@ -11,21 +11,8 @@ export const destinos = [
     long:-74.56753495,
     insignia:"Guardián de la Historia",
     historia:"La Iglesia San Juan Bautista se encuentra en la plaza José Olaya del barrio Pueblo Viejo. El inventario turístico de MINCETUR señala una construcción de época virreinal, con dos torres de piedra, portada de madera sobre arco de piedra labrada y elementos ornamentales de tradición barroca y churrigueresca.",
-    dificultad:"Fácil"
-  },
-  {
-    id:"complejo-arqueologico-allpas",
-    nombre:"Complejo Arqueológico de Allpas",
-    ubicacion:"Comunidad Campesina de Allpas, Acobamba",
-    descripcion:"Complejo arqueológico con sectores como las ventanillas, el templo ceremonial Hatun Rumi y antiguas áreas de vivienda.",
-    emoji:"🏺",
-    categoria:"Arqueología",
-    xp:100,
-    lat:-12.877319130182771,
-    long:-74.58430534891846,
-    insignia:"Explorador Arqueológico",
-    historia:"MINCETUR describe Allpas como un complejo arqueológico de la comunidad de Allpas, con cuatro sectores destacados: las ventanillas, el templo ceremonial Hatun Rumi, viviendas de base circular e Ichu Wasi e Inkicucho. El lugar permite realizar observación, fotografía y caminata.",
-    dificultad:"Media"
+    dificultad:"Fácil",
+    fotos:["img/iglesia-san-juan-bautista/1.webp","img/iglesia-san-juan-bautista/2.webp","img/iglesia-san-juan-bautista/3.webp","img/iglesia-san-juan-bautista/4.webp"]
   },
   {
     id:"willka-puquio",
@@ -39,7 +26,8 @@ export const destinos = [
     long:-74.5677,
     insignia:"Guardián del Agua",
     historia:"El inventario de MINCETUR registra Willka Puquio como un recurso de arquitectura y espacios urbanos. El nombre significa “Manantial del Nieto” y el sitio conserva un pequeño complejo hidráulico con canales, una fuente, una caída de aproximadamente 1,50 m y elementos tallados en piedra.",
-    dificultad:"Fácil"
+    dificultad:"Fácil",
+    fotos:["img/willka-puquio/1.webp","img/willka-puquio/2.webp","img/willka-puquio/3.webp"]
   },
   {
     id:"pinturas-rupestres-quillamachay",
@@ -53,7 +41,8 @@ export const destinos = [
     long:-74.5764,
     insignia:"Guardián del Arte Rupestre",
     historia:"MINCETUR registra las Pinturas Rupestres de Quillamachay como un sitio arqueológico de pintura rupestre. Las cuevas conservan representaciones de gran tamaño que cubren paredes y bóvedas, constituyendo un importante legado cultural de la zona.",
-    dificultad:"Media"
+    dificultad:"Media",
+    fotos:["img/pinturas-rupestres-quillamachay/1.webp","img/pinturas-rupestres-quillamachay/2.webp","img/pinturas-rupestres-quillamachay/3.webp","img/pinturas-rupestres-quillamachay/4.webp"]
   },
   {
     id:"tumbas-pre-incas-allpas",
@@ -67,7 +56,8 @@ export const destinos = [
     long:-74.58430534891846,
     insignia:"Custodio de los Ancestros",
     historia:"Las fuentes locales y documentos de planificación de Acobamba describen en Allpas un importante conjunto de tumbas preincas en el cerro Mukucho. La cifra de tumbas varía según la fuente y el inventario, por lo que esta versión evita presentar un número como dato exacto.",
-    dificultad:"Media"
+    dificultad:"Media",
+    fotos:["img/tumbas-pre-incas-allpas/1.webp","img/tumbas-pre-incas-allpas/2.webp","img/tumbas-pre-incas-allpas/3.webp","img/tumbas-pre-incas-allpas/4.webp"]
   },
   {
     id:"mirador-qapari",
@@ -81,7 +71,8 @@ export const destinos = [
     long:-74.57158176926595,
     insignia:"Explorador de Alturas",
     historia:"Material institucional de la provincia describe Qapari como un mirador ubicado al norte de la ciudad de Acobamba, en la comunidad Virgen de Lourdes, con formaciones rocosas y vistas panorámicas de la provincia.",
-    dificultad:"Media"
+    dificultad:"Media",
+    fotos:["img/mirador-qapari/1.webp","img/mirador-qapari/2.webp"]
   },
   {
     id:"alameda-identidad-acobambina",
@@ -95,7 +86,8 @@ export const destinos = [
     long:-74.5721516721012,
     insignia:"Embajador de Acobamba",
     historia:"La Alameda Eco Turística de la Identidad Acobambina aparece en documentación del Gobierno Regional de Huancavelica como un proyecto orientado al mejoramiento de un espacio de identidad y uso turístico de la ciudad.",
-    dificultad:"Fácil"
+    dificultad:"Fácil",
+    fotos:["img/alameda-identidad-acobambina/1.webp","img/alameda-identidad-acobambina/2.webp"]
   }
 ];
 
