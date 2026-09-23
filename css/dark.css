@@ -1,0 +1,41 @@
+@media (prefers-color-scheme: dark) {
+  body { background: #0e1b24; color: #e6f1f6; }
+
+  .auth-body { background: linear-gradient(145deg, #0d2430, #0a1b22 48%, #0c231c); }
+  .auth-page, .center-page { background: #0e1b24; }
+  .auth-card { background: rgba(20, 34, 42, .96); border-color: #1d333d; }
+
+  .topbar, .simple-topbar { background: rgba(14, 27, 36, .94); border-bottom-color: #1d333d; }
+  .bottom-nav { background: rgba(14, 27, 36, .96); border-top-color: #1d333d; }
+  .bottom-nav a { color: #8ba3ad; }
+  .bottom-nav a.active { color: #2dd4dd; }
+
+  .stat-card, .destination-card, .detail-card, .badge-card, .profile-card,
+  .section-card, .arrival-card, .map-card, .demo-note {
+    background: #14222a; border-color: #223640; color: #cfe2ea;
+  }
+  .success-card { background: linear-gradient(145deg, #10281f, #0e222b); border-color: #1f3a34; }
+
+  .hero { background: linear-gradient(135deg, #123039, #0f2a22); border-color: #1d3a3c; }
+  .destination-img, .detail-cover { background: linear-gradient(135deg, #123039, #0f2a22); }
+
+  h1, h2, h3, strong { color: #eef7fa; }
+  .muted, .destination-body p, .detail-content p, .stat-card span,
+  .badge-card p, .demo-note, .arrival-card p:not(.eyebrow), .success-card p {
+    color: #93a9b2;
+  }
+
+  .search-box { background: #10202a; border-color: #223640; }
+  .search-box input { color: #e6f1f6; }
+  .filter { background: #14222a; border-color: #223640; color: #93a9b2; }
+  .filter.active { background: #0b9ba5; color: #fff; border-color: #0b9ba5; }
+
+  .tag { background: #10303a; color: #6fd8e6; }
+  .pill { background: #10352c; color: #5be0b0; }
+
+  .btn.secondary { background: #14222a; color: #6fd8e6; }
+  .google-btn { background: #14222a; border-color: #223640; color: #e6f1f6; }
+
+  .progress { background: #223640; }
+  .locked { filter: grayscale(1) brightness(.7); }
+}

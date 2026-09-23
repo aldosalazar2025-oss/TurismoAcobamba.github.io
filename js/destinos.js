@@ -2,6 +2,7 @@ import { db, auth } from "./firebase.js";
 import { collection, getDocs, doc, setDoc } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-firestore.js";
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-auth.js";
 import { destinos } from "./destinos-data.js";
+import { vibrate, HAPTIC } from "./haptics.js";
 
 let currentCategory="Todos", searchTerm="", onlyFavorites=false, completed=[];
 
@@ -30,6 +31,7 @@ function toggleFavorite(id){
   let f=favorites();
   f=f.includes(id)?f.filter(x=>x!==id):[...f,id];
   localStorage.setItem("turismoAcobamba_favoritos",JSON.stringify(f));
+  vibrate(HAPTIC.favorite);
   renderCatalog();
 }
 

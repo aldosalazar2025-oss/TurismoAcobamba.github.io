@@ -1,4 +1,17 @@
-# TurismoAcobamba V9
+# TurismoAcobamba V14
+
+## Cambios en esta versión
+- Se corrigió el texto de la pantalla de login: decía "Turismo Recompensas" y ahora dice "Turismo Acobamba".
+- Se eliminó la redirección instantánea de `index.html` hacia `login.html` (causaba que la barra de direcciones del navegador se viera rara al entrar); ahora `index.html` muestra el login directamente.
+- Se corrigieron 3 rutas de fotos rotas (`.webp` vs `.png` real) en `iglesia-san-juan-bautista`, `pinturas-rupestres-quillamachay` y `alameda-identidad-acobambina`; esta última ahora también muestra su tercera foto que estaba sin usar.
+- **App instalable (PWA):** se agregó `manifest.json`, `js/sw.js` y `js/pwa.js` para que el usuario pueda instalar la app desde el navegador y abrirla sin la barra de direcciones.
+- **Funciona sin señal:** el service worker ahora guarda en caché el "esqueleto" de la app (HTML/CSS/JS/logo) y las fotos de cada destino a medida que se visitan, para poder navegar sin conexión. Si un usuario completa un destino sin señal, el logro se guarda en el celular (`js/offline.js`) y se sincroniza solo con Firestore apenas vuelve la conexión. Aparece un aviso "Sin conexión" en la parte superior mientras tanto.
+- **Modo oscuro:** la app respeta el modo oscuro del sistema (`css/dark.css`), sin necesidad de activarlo manualmente.
+- **Vibración (haptics):** pequeñas vibraciones al marcar favoritos y al desbloquear un logro (`js/haptics.js`), en celulares que lo soportan.
+- **Racha de días:** el perfil ahora muestra una racha de días consecutivos usando la app.
+- **Compartir insignias:** botón para compartir (o copiar) el logro desbloqueado, tanto justo al completarlo como luego desde "Mis logros".
+
+## Cambios de la V9
 
 ## Cambios en esta versión
 - Se agregó el destino **Laguna de Choclococha** (categoría Naturaleza), en el Centro Poblado de Choclococha, distrito de Pomacocha, con 3 fotos propias optimizadas a WebP.

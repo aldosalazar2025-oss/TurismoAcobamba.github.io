@@ -2,6 +2,8 @@ import { auth, db } from "./firebase.js";
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-auth.js";
 import { doc, getDoc, setDoc, increment, serverTimestamp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-firestore.js";
 import { destinoPorId } from "./destinos-data.js";
+import { queueLogro } from "./offline.js";
+import { vibrate, HAPTIC } from "./haptics.js";
 
 const id = new URLSearchParams(location.search).get("id");
 const d = destinoPorId(id);
@@ -144,19 +146,45 @@ async function completeDestination(){
     }
   }catch(e){
     console.error(e);
-    completed=false;
-    $("routeMessage").textContent="Llegaste a la zona, pero no se pudo guardar el logro. Revisa Firestore.";
+    if(!navigator.onLine){
+      queueLogro({destinoId:d.id,destino:d.nombre,insignia:d.insignia,xp:d.xp});
+      showSuccess(true,true);
+    }else{
+      completed=false;
+      $("routeMessage").textContent="Llegaste a la zona, pero no se pudo guardar el logro. Revisa tu conexión.";
+    }
   }
 }
 
-function showSuccess(isNew){
+function showSuccess(isNew,pending){
   $("successCard").classList.remove("hidden");
   $("rewardText").textContent=isNew?`⭐ +${d.xp} XP`:"🏆 Destino ya completado";
   $("successTitle").textContent=isNew?"¡Destino descubierto!":"¡Destino visitado!";
   $("successText").textContent=isNew
-    ? `Desbloqueaste la insignia “${d.insignia}”. Tu aventura continúa.`
+    ? `Desbloqueaste la insignia "${d.insignia}". Tu aventura continúa.`
     : "Este destino ya estaba en tu colección, así que no recibes XP nuevamente.";
+  const note=$("pendingNote");
+  if(note)note.classList.toggle("hidden",!pending);
+  if(isNew)vibrate(HAPTIC.success);
+  const shareBtn=$("shareBtn");
+  if(shareBtn)shareBtn.classList.toggle("hidden",!isNew);
 }
+
+async function shareBadge(){
+  const text=`🏆 ¡Desbloqueé la insignia "${d.insignia}" en ${d.nombre}, Acobamba! ⭐ +${d.xp} XP en Turismo Acobamba.`;
+  vibrate(HAPTIC.tap);
+  if(navigator.share){
+    try{ await navigator.share({title:"Turismo Acobamba",text,url:location.origin+location.pathname.replace("mapa.html","destino.html")+"?id="+encodeURIComponent(d.id)}); }
+    catch(e){}
+  }else if(navigator.clipboard){
+    try{
+      await navigator.clipboard.writeText(text);
+      $("shareBtn").textContent="✅ Copiado";
+      setTimeout(()=>{$("shareBtn").textContent="📤 Compartir logro";},2000);
+    }catch(e){}
+  }
+}
+$("shareBtn")?.addEventListener("click",shareBadge);
 
 function startGPS(){
   if(!navigator.geolocation){

@@ -11,6 +11,7 @@
   <title>Ruta - Turismo Acobamba</title><link rel="icon" type="image/png" sizes="32x32" href="img/brand/favicon-32.png"><link rel="apple-touch-icon" href="img/brand/favicon-180.png">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/dark.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 </head>
 <body>
@@ -58,12 +59,15 @@
       <h2 id="successTitle">¡Destino descubierto!</h2>
       <p id="successText">Has completado este reto y desbloqueaste una nueva recompensa.</p>
       <div class="reward" id="rewardText">⭐ +100 XP</div>
+      <p id="pendingNote" class="pending-note hidden">🔄 Se guardará en tu cuenta apenas recuperes señal</p>
+      <button id="shareBtn" class="btn share full hidden" type="button">📤 Compartir logro</button>
       <a class="btn primary full" href="logros.html">Ver mis insignias</a>
     </section>
   </main>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script type="module" src="js/mapa.js"></script>
+  <script type="module" src="js/offline.js"></script>
   <script src="js/pwa.js"></script>
 </body>
 </html>

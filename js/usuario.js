@@ -2,6 +2,21 @@ import { auth, db } from "./firebase.js";
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-auth.js";
 import { doc, getDoc, getDocs, collection, setDoc } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-firestore.js";
 
+function updateStreak(){
+  const KEY="turismoAcobamba_racha";
+  const today=new Date().toISOString().slice(0,10);
+  let data;
+  try{ data=JSON.parse(localStorage.getItem(KEY)||"null"); }catch{ data=null; }
+  if(!data){ data={count:1,last:today}; }
+  else if(data.last!==today){
+    const diffDays=Math.round((new Date(today)-new Date(data.last))/86400000);
+    data.count = diffDays===1 ? data.count+1 : 1;
+    data.last=today;
+  }
+  localStorage.setItem(KEY,JSON.stringify(data));
+  return data.count;
+}
+
 function rankFor(count){
   if(count>=7)return {name:"Maestro Explorador",icon:"🌎",next:"¡Has alcanzado el rango máximo de esta versión!"};
   if(count>=5)return {name:"Explorador Avanzado",icon:"🏆",next:`Descubre ${7-count} destinos para alcanzar Maestro Explorador.`};
@@ -24,6 +39,10 @@ onAuthStateChanged(auth,async u=>{
 
     const xp=logrosSnap.docs.reduce((total,x)=>total+Number(x.data().xp||100),0);
     if((data.xpAcumulado||0)!==xp)await setDoc(userRef,{xpAcumulado:xp},{merge:true});
+
+    const streak=updateStreak();
+    const streakEl=document.getElementById("streakValue");
+    if(streakEl)streakEl.textContent=streak;
 
     const rank=rankFor(count);
     const level=Math.floor(xp/100)+1;
