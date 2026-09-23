@@ -13,7 +13,7 @@ export const destinos = [
     historia:"La Iglesia San Juan Bautista se encuentra en la plaza José Olaya del barrio Pueblo Viejo. El inventario turístico de MINCETUR señala una construcción de época virreinal, con dos torres de piedra, portada de madera sobre arco de piedra labrada y elementos ornamentales de tradición barroca y churrigueresca.",
     dificultad:"Fácil",
     fotos:["img/iglesia-san-juan-bautista/1.webp","img/iglesia-san-juan-bautista/2.webp","img/iglesia-san-juan-bautista/3.webp","img/iglesia-san-juan-bautista/4.webp"],
-    fotoPos:"center"
+    fotoPos:"center 60%"
   },
   {
     id:"willka-puquio",
@@ -58,6 +58,7 @@ export const destinos = [
     insignia:"Custodio de los Ancestros",
     historia:"Las fuentes locales y documentos de planificación de Acobamba describen en Allpas un importante conjunto de tumbas preincas en el cerro Mukucho. La cifra de tumbas varía según la fuente y el inventario, por lo que esta versión evita presentar un número como dato exacto.",
     dificultad:"Media",
+    fotoFit:"contain",
     fotos:["img/tumbas-pre-incas-allpas/1.webp","img/tumbas-pre-incas-allpas/2.webp","img/tumbas-pre-incas-allpas/3.webp","img/tumbas-pre-incas-allpas/4.webp"]
   },
   {
