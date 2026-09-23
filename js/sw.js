@@ -1,12 +1,12 @@
-const SHELL_CACHE = "acobamba-shell-v3";
-const RUNTIME_CACHE = "acobamba-runtime-v3";
+const SHELL_CACHE = "acobamba-shell-v4";
+const RUNTIME_CACHE = "acobamba-runtime-v4";
 
 const SHELL_ASSETS = [
   "index.html", "login.html", "app.html", "destino.html", "logros.html", "mapa.html", "perfil.html",
   "manifest.json",
   "css/style.css", "css/responsive.css", "css/dark.css",
   "js/firebase.js", "js/auth.js", "js/destinos.js", "js/destinos-data.js",
-  "js/logros.js", "js/mapa.js", "js/usuario.js", "js/pwa.js", "js/offline.js", "js/haptics.js",
+  "js/logros.js", "js/mapa.js", "js/usuario.js", "js/pwa.js", "js/offline.js", "js/haptics.js", "js/theme.js",
   "img/brand/logo.png", "img/brand/favicon-32.png", "img/brand/favicon-180.png", "img/brand/favicon-512.png"
 ];
 

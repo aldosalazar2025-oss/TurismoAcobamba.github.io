@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta charset="UTF-8">
+<script src="js/theme.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="theme-color" content="#aee9ff">
   <link rel="manifest" href="manifest.json">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -14,7 +16,10 @@
 <body>
 <header class="topbar">
   <a class="brand" href="app.html"><img src="img/brand/logo.png" alt="Turismo Acobamba"> Turismo Acobamba</a>
-  <a class="avatar-link" href="perfil.html"><img id="userPhoto" src="https://placehold.co/80x80?text=👤" alt="Perfil"><span id="userName">Explorador</span></a>
+  <div class="topbar-right">
+    <button type="button" class="theme-toggle-btn" data-theme-toggle>🌙 Modo oscuro</button>
+    <a class="avatar-link" href="perfil.html"><img id="userPhoto" src="https://placehold.co/80x80?text=👤" alt="Perfil"><span id="userName">Explorador</span></a>
+  </div>
 </header>
 <main class="container page-space">
   <section class="hero">
