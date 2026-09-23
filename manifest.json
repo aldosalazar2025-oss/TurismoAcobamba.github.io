@@ -1,0 +1,17 @@
+{
+  "name": "Turismo Acobamba",
+  "short_name": "T. Acobamba",
+  "description": "Descubre lugares increíbles y colecciona insignias por tus aventuras en Acobamba.",
+  "start_url": "index.html",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#aee9ff",
+  "theme_color": "#aee9ff",
+  "icons": [
+    { "src": "img/brand/favicon-32.png", "sizes": "32x32", "type": "image/png" },
+    { "src": "img/brand/favicon-180.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "img/brand/favicon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "img/brand/favicon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

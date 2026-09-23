@@ -2,7 +2,12 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#aee9ff">
+  <link rel="manifest" href="manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Turismo Acobamba">
   <title>Iniciar sesión - Turismo Acobamba</title><link rel="icon" type="image/png" sizes="32x32" href="img/brand/favicon-32.png"><link rel="apple-touch-icon" href="img/brand/favicon-180.png">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
@@ -12,7 +17,7 @@
     <section class="auth-card">
       <div class="logo-circle"><img src="img/brand/logo.png" alt="Turismo Acobamba"></div>
       <p class="eyebrow">DESCUBRE • EXPLORA • GANA</p>
-      <h1>Turismo<br><span>Recompensas</span></h1>
+      <h1>Turismo<br><span>Acobamba</span></h1>
       <p class="muted">Descubre lugares increíbles y colecciona insignias por tus aventuras.</p>
       <button id="googleLogin" class="google-btn" type="button">
         <span class="google-letter">G</span> Continuar con Google
@@ -22,5 +27,6 @@
     </section>
   </main>
   <script type="module" src="js/auth.js"></script>
+  <script src="js/pwa.js"></script>
 </body>
 </html>

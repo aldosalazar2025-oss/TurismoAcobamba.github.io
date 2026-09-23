@@ -12,7 +12,7 @@ export const destinos = [
     insignia:"Guardián de la Historia",
     historia:"La Iglesia San Juan Bautista se encuentra en la plaza José Olaya del barrio Pueblo Viejo. El inventario turístico de MINCETUR señala una construcción de época virreinal, con dos torres de piedra, portada de madera sobre arco de piedra labrada y elementos ornamentales de tradición barroca y churrigueresca.",
     dificultad:"Fácil",
-    fotos:["img/iglesia-san-juan-bautista/1.webp","img/iglesia-san-juan-bautista/2.webp","img/iglesia-san-juan-bautista/3.webp","img/iglesia-san-juan-bautista/4.webp"],
+    fotos:["img/iglesia-san-juan-bautista/1.png","img/iglesia-san-juan-bautista/2.webp","img/iglesia-san-juan-bautista/3.webp","img/iglesia-san-juan-bautista/4.webp"],
     fotoFit:"contain"
   },
   {
@@ -43,7 +43,7 @@ export const destinos = [
     insignia:"Guardián del Arte Rupestre",
     historia:"MINCETUR registra las Pinturas Rupestres de Quillamachay como un sitio arqueológico de pintura rupestre. Las cuevas conservan representaciones de gran tamaño que cubren paredes y bóvedas, constituyendo un importante legado cultural de la zona.",
     dificultad:"Media",
-    fotos:["img/pinturas-rupestres-quillamachay/1.webp","img/pinturas-rupestres-quillamachay/2.webp","img/pinturas-rupestres-quillamachay/3.webp","img/pinturas-rupestres-quillamachay/4.webp"]
+    fotos:["img/pinturas-rupestres-quillamachay/1.png","img/pinturas-rupestres-quillamachay/2.webp","img/pinturas-rupestres-quillamachay/3.webp","img/pinturas-rupestres-quillamachay/4.webp"]
   },
   {
     id:"tumbas-pre-incas-allpas",
@@ -89,7 +89,7 @@ export const destinos = [
     insignia:"Embajador de Acobamba",
     historia:"La Alameda Eco Turística de la Identidad Acobambina aparece en documentación del Gobierno Regional de Huancavelica como un proyecto orientado al mejoramiento de un espacio de identidad y uso turístico de la ciudad.",
     dificultad:"Fácil",
-    fotos:["img/alameda-identidad-acobambina/1.webp","img/alameda-identidad-acobambina/2.webp"]
+    fotos:["img/alameda-identidad-acobambina/1.png","img/alameda-identidad-acobambina/2.webp","img/alameda-identidad-acobambina/3.png"]
   },
   {
     id:"laguna-choclococha",
